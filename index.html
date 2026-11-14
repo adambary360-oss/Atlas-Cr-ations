@@ -1,11 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="assets/app.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
     <title>Document</title>
 </head>
-<body>
-    
+
+<body class=" flex flex-col items-center bg-[#2c3e55]">
+    <header class="h-[10%] w-full flex justify-between p-3 bg-blue-950 items-center">
+        <p class="text-3xl text-white font-bold">Atlas Créations</p>
+        <nav>
+            <ul class="flex gap-[40px]">
+                <li class="text-xl text-white">Accueil</li>
+                <li class="text-xl text-white">Services</li>
+                <li class="text-xl text-white">Contact</li>
+            </ul>
+        </nav>
+    </header>
+<main class="w-[95%] flex flex-col items-center ">
+    <section class="hero w-[90%] h-screen  flex justify-around">
+<div class="w-[50%] flex flex-col justify-center gap-3" >
+<p class="text-[#e74c3c] text-sm font-bold ">STUDIO DIGITAL · MAROC</p>
+<p class="text-white text-3xl">Le digital, façonné à votre image.</p>
+<p class="text-white text-sm">Atlas Créations imagine des expériences web singulières pour les marques qui ont une histoire à raconter. De la première idée au dernier détail, nous créons avec intention.</p>
+<p class="text-white text-2xl p-3 bg-[#e74c3c] w-fit h-fit rounded-2xl font-bold">Découvrir nos services</p>
+<p class="text-white">Mini-projet de formation · Maquette visuelle</p>
+</div>
+
+<div class=" w-[50%] flex h-full justify-center items-center">
+<img src="assets/img.jpg" class="rounded-2xl " alt="">
+</div>
+    </section>
+    <section class="w-full">
+       <h2 class=" text-white font-bold text-2xl">Nos Services</h2>
+        <p class="">
+          Affichez ou masquez la liste des prestations et ajoutez-en une nouvelle.
+        </p>
+    </section>
+</main>
 </body>
+
 </html>
