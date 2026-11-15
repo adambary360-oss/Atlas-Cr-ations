@@ -46,8 +46,7 @@
           un service</button>
         <div>
           <ul id="listservice" class="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto">
-            <li
-              class="flex items-center justify-between gap-3 bg-slate-100 text-slate-900 px-4 py-3 rounded-2xl ">
+            <li class="flex items-center justify-between gap-3 bg-slate-100 text-slate-900 px-4 py-3 rounded-2xl ">
               <span>Développement Web</span>
             </li>
           </ul>
@@ -105,20 +104,22 @@
 
 
 
-    <section id="Produits" class="mx-auto  bg-white text-slate-900 rounded-3xl px-8 py-6 shadow-md">
+    <section id="Produits" class="mx-auto bg-white text-slate-900 rounded-3xl px-8 py-6 shadow-md">
       <h2 class="text-2xl font-bold tracking-tight text-center">Produits</h2>
       <p class="mt-1 text-slate-800 text-center">
         Ajoutez une offre au panier et suivez le total en direct.
       </p>
 
       <ul id="productList" class="mt-5 grid grid-cols-1 md:grid-cols-2 gap-4">
+
+
         <li class="flex items-center justify-between gap-4 bg-slate-100 rounded-2xl px-5 py-4">
           <div>
             <p class="font-semibold text-slate-900">Site Vitrine Artisan</p>
             <p class="text-sm text-slate-700">2500 MAD</p>
           </div>
           <button type="button" data-name="Site Vitrine Artisan" data-price="2500"
-            class="bg-[#E74C3C] text-white px-5 py-2.5 rounded-2xl">
+            class="bg-[#E74C3C]  text-white font-semibold px-5 py-2.5 rounded-2xl cursor-pointer ">
             Ajouter
           </button>
         </li>
@@ -129,42 +130,82 @@
             <p class="text-sm text-slate-700">1800 MAD</p>
           </div>
           <button type="button" data-name="Identité Visuelle" data-price="1800"
-            class="bg-[#E74C3C]  text-white font-semibold px-5 py-2.5 rounded-2xl  ">
+            class="bg-[#E74C3C]  text-white font-semibold px-5 py-2.5 rounded-2xl cursor-pointer ">
             Ajouter
           </button>
         </li>
+
+
         <li class="flex items-center justify-between gap-4 bg-slate-100 rounded-2xl px-5 py-4">
           <div>
-            <p class="font-semibold text-slate-900">Identité Visuelle</p>
-            <p class="text-sm text-slate-700">1800 MAD</p>
+            <p class="font-semibold text-slate-900">Boutique E-Commerce</p>
+            <p class="text-sm text-slate-700">4200 MAD</p>
           </div>
-          <button type="button" data-name="Identité Visuelle" data-price="1800"
-            class="bg-[#E74C3C]  text-white font-semibold px-5 py-2.5 rounded-2xl  ">
+          <button type="button" data-name="Boutique E-Commerce" data-price="4200"
+            class="bg-[#E74C3C]  text-white font-semibold px-5 py-2.5 rounded-2xl cursor-pointer ">
             Ajouter
           </button>
         </li>
+
+
         <li class="flex items-center justify-between gap-4 bg-slate-100 rounded-2xl px-5 py-4">
           <div>
-            <p class="font-semibold text-slate-900">Identité Visuelle</p>
-            <p class="text-sm text-slate-700">1800 MAD</p>
+            <p class="font-semibold text-slate-900">Catalogue Lookbook Digital</p>
+            <p class="text-sm text-slate-700">1500 MAD</p>
           </div>
-          <button type="button" data-name="Identité Visuelle" data-price="1800"
-            class="bg-[#E74C3C]  text-white font-semibold px-5 py-2.5 rounded-2xl  ">
+          <button type="button" data-name="Catalogue Lookbook Digital" data-price="1500"
+            class="bg-[#E74C3C]  text-white font-semibold px-5 py-2.5 rounded-2xl cursor-pointer ">
+            Ajouter
+          </button>
+        </li>
+
+
+        <li class="flex items-center justify-between gap-4 bg-slate-100 rounded-2xl px-5 py-4">
+          <div>
+            <p class="font-semibold text-slate-900">Pack Photo Atelier</p>
+            <p class="text-sm text-slate-700">1200 MAD</p>
+          </div>
+          <button type="button" data-name="Pack Photo Atelier" data-price="1200"
+            class="bg-[#E74C3C]  text-white font-semibold px-5 py-2.5 rounded-2xl cursor-pointer ">
+            Ajouter
+          </button>
+        </li>
+
+
+        <li class="flex items-center justify-between gap-4 bg-slate-100 rounded-2xl px-5 py-4">
+          <div>
+            <p class="font-semibold text-slate-900">Maintenance Support</p>
+            <p class="text-sm text-slate-700">600 MAD</p>
+          </div>
+          <button type="button" data-name="Maintenance & Support" data-price="600"
+            class="bg-[#E74C3C]  text-white font-semibold px-5 py-2.5 rounded-2xl cursor-pointer ">
             Ajouter
           </button>
         </li>
       </ul>
+      <ul id="panierlist" class="flex flex-col ">
 
-      <div class="mt-6 pt-5 ">
+      </ul>
+      <div class="mt-6 pt-5 border-t border-slate-200">
         <h3 class="text-lg font-bold text-slate-900 text-center">Panier</h3>
-        <ul id="cartItems" class="mt-3 space-y-2 text-sm text-slate-800">
-        </ul>
+        <ul id="cartItems" class="mt-3 space-y-2 text-sm text-slate-800 max-w-md mx-auto"></ul>
         <p class="mt-4 text-center font-bold text-slate-900">
           Total : <span id="total" class="text-[#E74C3C]">0</span> MAD
         </p>
       </div>
     </section>
   </main>
+  <footer 
+    class="bg-[#2C3E50] text-[#ECF0F1] border-t border-white/10 mt-10 px-6 py-5 ">
+    <div class="max-w-5xl mx-auto flex flex-col items-center justify-between gap-3 text-sm">
+      <p class="font-normal">
+        © 2026 <span class="font-semibold text-[#E74C3C]">Atlas Créations</span> — Tous droits réservés.
+      </p>
+      <span id="copier" class="text-xs text-[#ECF0F1]/80">
+        Cliquez pour copier le copyright
+      </span>
+    </div>
+  </footer>
 </body>
 
 </html>

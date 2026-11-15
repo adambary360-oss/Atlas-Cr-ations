@@ -50,3 +50,35 @@ testimonialsContainer.addEventListener(
         alert(cite.textContent);
     },
 );
+
+const productList = document.getElementById("productList")
+const totalpanier = document.getElementById("total")
+const panierlist = document.getElementById("panierlist")
+let total = 0
+
+productList.addEventListener("click", (e) =>{
+
+    const btn = e.target.closest("button")
+    if(!btn)return
+
+    const name = btn.dataset.name
+    const price = Number(btn.dataset.price)
+    console.log(name,price);
+    total += price
+    totalpanier.textContent = total 
+    const cart = document.createElement("li")
+    cart.classList.add = "font-bold"
+    cart.textContent = `${name} ${price}DH`
+        
+    panierlist.appendChild(cart)
+    
+})
+const copier = document.getElementById("copier")
+
+copier.addEventListener("click" , ()=>{
+    console.log(copier);
+    
+    navigator.clipboard.writeText("© 2026 Atlas Créations — Tous droits réservés.")
+    alert("copier")
+
+})
