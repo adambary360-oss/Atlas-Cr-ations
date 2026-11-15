@@ -2,161 +2,169 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/style.css">
-    <script src="assets/app.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/app.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-    <title>Document</title>
+  <title>Document</title>
 </head>
 
 <body class=" flex flex-col items-center bg-[#2c3e55]">
-    <header class="h-[10%] w-full flex justify-between p-3 bg-blue-950 items-center">
-        <p class="text-3xl text-white font-bold">Atlas Créations</p>
-        <nav>
-            <ul class="flex gap-[40px]">
-                <li class="text-xl text-white" ><a href="">Accueil</a></li>
-                <li class="text-xl text-white" ><a href="">Services</a></li>
-                <li class="text-xl text-white" ><a href="">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-<main class="w-[95%] flex flex-col items-center gap-2 ">
+  <header class="h-[10%] w-full flex justify-between p-3 bg-blue-950 items-center">
+    <p class="text-3xl text-white font-bold">Atlas Créations</p>
+    <nav>
+      <ul class="flex gap-[40px]">
+        <li class="text-xl text-white"><a href="">Accueil</a></li>
+        <li class="text-xl text-white"><a href="">Services</a></li>
+        <li class="text-xl text-white"><a href="">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="w-[95%] flex flex-col items-center gap-2 ">
     <section id="Accueil" class="hero w-[90%] h-screen  flex justify-around">
-<div class="w-[50%] flex flex-col justify-center gap-3" >
-<h2 class="text-[#e74c3c] text-sm font-bold ">STUDIO DIGITAL · MAROC</h2>
-<p class="text-white text-3xl font-bold">Le digital, façonné à votre image.</p>
-<p class="text-gray-300 text-sm">Atlas Créations imagine des expériences web singulières pour les marques qui ont une histoire à raconter. De la première idée au dernier détail, nous créons avec intention.</p>
-<p class="text-white text-2xl p-3 bg-[#e74c3c] w-fit h-fit rounded-2xl font-bold">Découvrir nos services</p>
-</div>
+      <div class="w-[50%] flex flex-col justify-center gap-3">
+        <h2 class="text-[#e74c3c] text-sm font-bold ">STUDIO DIGITAL · MAROC</h2>
+        <p class="text-white text-3xl font-bold">Le digital, façonné à votre image.</p>
+        <p class="text-gray-300 text-sm">Atlas Créations imagine des expériences web singulières pour les marques qui
+          ont une histoire à raconter. De la première idée au dernier détail, nous créons avec intention.</p>
+        <p class="text-white text-2xl p-3 bg-[#e74c3c] w-fit h-fit rounded-2xl font-bold">Découvrir nos services</p>
+      </div>
 
-<div class=" w-[50%] flex h-full justify-center items-center">
-<img src="assets/img.jpg" class="rounded-2xl " alt="">
-</div>
-    </section  >
+      <div class=" w-[50%] flex h-full justify-center items-center">
+        <img src="assets/img.jpg" class="rounded-2xl " alt="">
+      </div>
+    </section>
 
 
 
     <section id="services" class="w-ful h-fit  flex flex-col items-center  bg-white rounded-2xl p-3 ">
-       <button id="btnshowserve"  class=" text-black font-bold text-2xl ">Nos Services</button>
-       <div id="hidingcontent" class=" hidden items-center">
-        <p class="">
-          Affichez ou masquez la liste des prestations et ajoutez-en une nouvelle.
-        </p>
-        <button class="text-white text-2xl p-3 bg-[#e74c3c] w-fit h-fit rounded-2xl font-bold ">Ajouter un service</button>
+      <button id="btnshowserve" class=" text-black font-bold text-2xl ">Nos Services</button>
+      <div id="hidingcontent" class=" hidden flex flex-col justify-center ">
+        <button id="btnopenform" class="text-white text-2xl p-3 bg-[#e74c3c] w-fit h-fit rounded-2xl font-bold ">Ajouter
+          un service</button>
         <div>
-            <ul> 
-            </ul>
+          <ul id="listservice" class="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-2xl mx-auto">
+            <li
+              class="flex items-center justify-between gap-3 bg-slate-100 text-slate-900 px-4 py-3 rounded-2xl ">
+              <span>Développement Web</span>
+            </li>
+          </ul>
         </div>
-        </div>
+        <dialog id="modal" class="m-auto rounded-2xl p-6 bg-white">
+          <div class="flex justify-center bg-none self-center size-full items-center">
+
+            <form id="serviceForm" class="mt-4 flex flex-col gap-4">
+              <h3 class="text-xl font-bold text-center">Ajouter un service</h3>
+              <input type="text" id="serviceInput" placeholder="Ex: Création site vitrine" required
+                class="w-full rounded-xl border border-slate-300 px-3.5 py-2.5 text-slate-900 focus:outline-none focus:border-[#E74C3C]" />
+              <button type="button" id="closemodal"
+                class="px-4 py-2 rounded-xl border border-slate-300 text-slate-700 font-semibold hover:bg-slate-100 cursor-pointer">
+                close
+              </button>
+              <button type="submit" id="btnajoutservice" class="px-4 py-2 rounded-xl bg-[#E74C3C]  text-white">
+                Ajouter
+              </button>
+
+            </form>
+          </div>
+        </dialog>
+      </div>
     </section>
 
 
     <section id="Témoignages" class="w-ful h-fit  flex flex-col bg-white rounded-2xl gap-2 p-3 ">
-  <h2 class=" text-black font-bold text-2xl self-center ">Témoignages</h2>
-  <div class="testimonials grid grid-cols-3 ">
-    <div class="testimonial flex flex-col justify-center items-center text-center gap-2 ">
-      <blockquote>« Site vitrine clair qui a aidé notre atelier à se faire connaître. »</blockquote>
-      <cite>Coopérative Tissage Atlas</cite>
-      <button class="text-white text-1ms p-3 bg-[#e74c3c] w-fit h-fit rounded-2xl font-bold" type="button">Détails</button>
-    </div>
-
-    <div class="testimonial flex flex-col justify-center items-center text-center gap-2 ">
-      <blockquote>« Très bon accompagnement pour présenter nos pièces artisanales. »</blockquote>
-      <cite>Maison Benali — Poterie</cite>
-      <button class="text-white text-1ms p-3 bg-[#e74c3c] w-fit h-fit rounded-2xl font-bold" type="button">Détails</button>
-    </div>
-
-    <div class="testimonial flex flex-col justify-center items-center text-center gap-2 ">
-      <blockquote>« Nos clients trouvent facilement nos créations et notre contact. »</blockquote>
-      <cite>Atelier Cuir Marrakech</cite>
-      <button class="text-white text-1ms p-3 bg-[#e74c3c] w-fit h-fit rounded-2xl font-bold" type="button">Détails</button>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
-<section id="Produits" class="mx-auto  bg-white text-slate-900 rounded-3xl px-8 py-6 shadow-md">
-    <h2 class="text-2xl font-bold tracking-tight text-center">Produits</h2>
-    <p class="mt-1 text-slate-800 text-center">
-      Ajoutez une offre au panier et suivez le total en direct.
-    </p>
-
-    <ul id="productList" class="mt-5 grid grid-cols-1 md:grid-cols-2 gap-4">
-      <li class="flex items-center justify-between gap-4 bg-slate-100 rounded-2xl px-5 py-4">
-        <div>
-          <p class="font-semibold text-slate-900">Site Vitrine Artisan</p>
-          <p class="text-sm text-slate-700">2500 MAD</p>
+      <h2 class=" text-black font-bold text-2xl self-center ">Témoignages</h2>
+      <div class="testimonials grid grid-cols-3 ">
+        <div class="testimonial flex flex-col justify-center items-center text-center gap-2 ">
+          <blockquote>« Site vitrine clair qui a aidé notre atelier à se faire connaître. »</blockquote>
+          <cite>Coopérative Tissage Atlas</cite>
+          <button class="text-white text-1ms p-3 bg-[#e74c3c] w-fit h-fit rounded-2xl font-bold"
+            type="button">Détails</button>
         </div>
-        <button
-          type="button"
-          data-name="Site Vitrine Artisan"
-          data-price="2500"
-          class="bg-[#E74C3C] text-white px-5 py-2.5 rounded-2xl"
-        >
-          Ajouter
-        </button>
-      </li>
 
-      <li class="flex items-center justify-between gap-4 bg-slate-100 rounded-2xl px-5 py-4">
-        <div>
-          <p class="font-semibold text-slate-900">Identité Visuelle</p>
-          <p class="text-sm text-slate-700">1800 MAD</p>
+        <div class="testimonial flex flex-col justify-center items-center text-center gap-2 ">
+          <blockquote>« Très bon accompagnement pour présenter nos pièces artisanales. »</blockquote>
+          <cite>Maison Benali — Poterie</cite>
+          <button class="text-white text-1ms p-3 bg-[#e74c3c] w-fit h-fit rounded-2xl font-bold"
+            type="button">Détails</button>
         </div>
-        <button
-          type="button"
-          data-name="Identité Visuelle"
-          data-price="1800"
-          class="bg-[#E74C3C]  text-white font-semibold px-5 py-2.5 rounded-2xl  "
-        >
-          Ajouter
-        </button>
-      </li>
-      <li class="flex items-center justify-between gap-4 bg-slate-100 rounded-2xl px-5 py-4">
-        <div>
-          <p class="font-semibold text-slate-900">Identité Visuelle</p>
-          <p class="text-sm text-slate-700">1800 MAD</p>
-        </div>
-        <button
-          type="button"
-          data-name="Identité Visuelle"
-          data-price="1800"
-          class="bg-[#E74C3C]  text-white font-semibold px-5 py-2.5 rounded-2xl  "
-        >
-          Ajouter
-        </button>
-      </li>
-      <li class="flex items-center justify-between gap-4 bg-slate-100 rounded-2xl px-5 py-4">
-        <div>
-          <p class="font-semibold text-slate-900">Identité Visuelle</p>
-          <p class="text-sm text-slate-700">1800 MAD</p>
-        </div>
-        <button
-          type="button"
-          data-name="Identité Visuelle"
-          data-price="1800"
-          class="bg-[#E74C3C]  text-white font-semibold px-5 py-2.5 rounded-2xl  "
-        >
-          Ajouter
-        </button>
-      </li>
-    </ul>
 
-    <div class="mt-6 pt-5 ">
-      <h3 class="text-lg font-bold text-slate-900 text-center">Panier</h3>
-      <ul id="cartItems" class="mt-3 space-y-2 text-sm text-slate-800">
-      </ul>
-      <p class="mt-4 text-center font-bold text-slate-900">
-        Total : <span id="total" class="text-[#E74C3C]">0</span> MAD
+        <div class="testimonial flex flex-col justify-center items-center text-center gap-2 ">
+          <blockquote>« Nos clients trouvent facilement nos créations et notre contact. »</blockquote>
+          <cite>Atelier Cuir Marrakech</cite>
+          <button class="text-white text-1ms p-3 bg-[#e74c3c] w-fit h-fit rounded-2xl font-bold"
+            type="button">Détails</button>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+    <section id="Produits" class="mx-auto  bg-white text-slate-900 rounded-3xl px-8 py-6 shadow-md">
+      <h2 class="text-2xl font-bold tracking-tight text-center">Produits</h2>
+      <p class="mt-1 text-slate-800 text-center">
+        Ajoutez une offre au panier et suivez le total en direct.
       </p>
-    </div>
-  </section>
-</main>
+
+      <ul id="productList" class="mt-5 grid grid-cols-1 md:grid-cols-2 gap-4">
+        <li class="flex items-center justify-between gap-4 bg-slate-100 rounded-2xl px-5 py-4">
+          <div>
+            <p class="font-semibold text-slate-900">Site Vitrine Artisan</p>
+            <p class="text-sm text-slate-700">2500 MAD</p>
+          </div>
+          <button type="button" data-name="Site Vitrine Artisan" data-price="2500"
+            class="bg-[#E74C3C] text-white px-5 py-2.5 rounded-2xl">
+            Ajouter
+          </button>
+        </li>
+
+        <li class="flex items-center justify-between gap-4 bg-slate-100 rounded-2xl px-5 py-4">
+          <div>
+            <p class="font-semibold text-slate-900">Identité Visuelle</p>
+            <p class="text-sm text-slate-700">1800 MAD</p>
+          </div>
+          <button type="button" data-name="Identité Visuelle" data-price="1800"
+            class="bg-[#E74C3C]  text-white font-semibold px-5 py-2.5 rounded-2xl  ">
+            Ajouter
+          </button>
+        </li>
+        <li class="flex items-center justify-between gap-4 bg-slate-100 rounded-2xl px-5 py-4">
+          <div>
+            <p class="font-semibold text-slate-900">Identité Visuelle</p>
+            <p class="text-sm text-slate-700">1800 MAD</p>
+          </div>
+          <button type="button" data-name="Identité Visuelle" data-price="1800"
+            class="bg-[#E74C3C]  text-white font-semibold px-5 py-2.5 rounded-2xl  ">
+            Ajouter
+          </button>
+        </li>
+        <li class="flex items-center justify-between gap-4 bg-slate-100 rounded-2xl px-5 py-4">
+          <div>
+            <p class="font-semibold text-slate-900">Identité Visuelle</p>
+            <p class="text-sm text-slate-700">1800 MAD</p>
+          </div>
+          <button type="button" data-name="Identité Visuelle" data-price="1800"
+            class="bg-[#E74C3C]  text-white font-semibold px-5 py-2.5 rounded-2xl  ">
+            Ajouter
+          </button>
+        </li>
+      </ul>
+
+      <div class="mt-6 pt-5 ">
+        <h3 class="text-lg font-bold text-slate-900 text-center">Panier</h3>
+        <ul id="cartItems" class="mt-3 space-y-2 text-sm text-slate-800">
+        </ul>
+        <p class="mt-4 text-center font-bold text-slate-900">
+          Total : <span id="total" class="text-[#E74C3C]">0</span> MAD
+        </p>
+      </div>
+    </section>
+  </main>
 </body>
 
 </html>
