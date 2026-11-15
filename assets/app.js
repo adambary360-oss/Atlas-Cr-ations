@@ -32,3 +32,21 @@ btnajoutservice.addEventListener("click", (e) => {
     serviceajouter.append(title);
     listservice.appendChild(serviceajouter)
 })
+
+
+const testimonialsContainer = document.querySelector(".testimonials");
+
+testimonialsContainer.addEventListener(
+    "click",
+    (e) => {
+        if (e.target.closest(".details-btn")) return;
+
+        const card = e.target.closest(".testimonial");
+        if (!card) return;
+
+        const cite = card.querySelector("cite");
+        if (!cite) return;
+
+        alert(cite.textContent);
+    },
+);
